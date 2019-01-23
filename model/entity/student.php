@@ -5,15 +5,15 @@
  */
 class student extends user
 {
-  protected $code;
+  protected $code_session;
 
-  public function getCode(){ return $this->code ;}
+  public function getCode_session(){ return $this->code_session ;}
 
-  public function getCode($status) {
+  public function setCode_session(string $status) {
     $this->status = $status;
   }
 
-  function __construct()
+  function __construct($data = false)
   {
     if($data) {
       $this->hydrate($data);

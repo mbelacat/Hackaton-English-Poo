@@ -9,7 +9,7 @@ class admin extends user
 
   public function getPassword(){ return $this->password ;}
 
-  public function getPassword($password) {
+  public function setPassword(string $password) {
     $this->password = $password;
   }
 

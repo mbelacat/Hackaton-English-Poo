@@ -1,51 +1,53 @@
-<?php
+created_date<?php
 /**
  *
  */
 class session extends entity
 {
-  protected $userId;
+  protected $user_id;
   protected $code;
-  protected $createdDate;
-  protected $startQcmDate;
-  protected $endQcmDate;
+  protected $created_date;
+  protected $start_qcm_date;
+  protected $end_qcm_date;
   protected $result;
   protected $level;
   protected $progress;
 
   const LEVELS = ["debutant", "moyen", "confirmer"];
-  const PROGRESS = ["non debuté", "en cours", "terminé"];
+  const PROGRESSS = ["non debuté", "en cours", "terminé"];
 
   public function getUserId(){ return $this->user_id ;}
   public function getCode(){ return  $this->code ;}
-  public function getCreatedDate(){ return $this->createdDate ;}
-  public function getStartQcmDate(){ return $this->endQcmDate ;}
-  public function getEndQcmDate(){ return $this->startQcmDate ;}
+  public function getCreatedDate(){ return $this->created_date ;}
+  public function getStartQcmDate(){ return $this->end_qcm_date ;}
+  public function getEndQcmDate(){ return $this->start_qcm_date ;}
   public function getResult(){ return $this->result ;}
   public function getLevel(){ return $this->level ;}
   public function getProgress(){ return $this->progress ;}
 
 
-  public function setUserId(int $amount) {
-      $this->amount = $amount;
+  public function setUser_id(int $user_id) {
+      $this->user_id = $user_id;
     }
-
-  public function setCreatedDate(int $createdDate = null) {
-    $this->createdDate = $createdDate;
+  public function setCode(string $code) {
+      $this->code = $code;
+    }
+  public function setCreated_date(string $created_date = null) {
+    $this->created_date = $created_date;
   }
 
-  public function setEndQcmDate(int $endQcmDate = null) {
-    $this->endQcmDate = $endQcmDate;
+  public function setEndQcm_date(string $end_qcm_date = null) {
+    $this->end_qcm_date = $end_qcm_date;
   }
 
-  public function setStartQcmDate(int $startQcmDate = null) {
-    $this->startQcmDate = $startQcmDate;
+  public function setStart_qcm_date(string $start_qcm_date = null) {
+    $this->$start_qcm_date = $start_qcm_date;
   }
 
   public function setResult(int $result = null) {
     $this->result = $result;
   }
-  
+
   public function setLevel(string $level = null) {
     if(in_array($level, self::LEVELS)) {
       $this->level = $level;
@@ -53,7 +55,7 @@ class session extends entity
   }
 
   public function setProgress(string $progress = null) {
-    if(in_array($progress, self::PROGRESS)) {
+    if(in_array($progress, self::PROGRESSS)) {
       $this->progress = $progress;
     }
   }

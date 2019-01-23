@@ -20,10 +20,18 @@ class sessionManager extends manager
 
   public function getUserSessions()
   {
-    $query = $this->getDb()->query("SELECT s.*, u.first_name, u.last_name FROM session AS s INNER JOIN user AS u WHERE s.user_id = u.id_user");
-    $result = $query->fetchAll(PDO::FETCH_ASSOC);
-    return $result;
+    $query = $this->getDb()->query("SELECT * FROM session AS s INNER JOIN user AS u WHERE s.user_id = u.id_user");
+    $UserSessions = $query->fetchAll(PDO::FETCH_ASSOC);
     $query->closeCursor();
+    foreach ($UserSessions as $key => $UserSession) {
+      $student[$key][0] = new session($UserSession);
+      $student[$key][1] = new student($UserSession);
+      // $studentSession[] = $student;
+     }
+     return $student;
+
+
+
   }
 
   function __construct()

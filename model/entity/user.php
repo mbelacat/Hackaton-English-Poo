@@ -5,44 +5,43 @@
  */
 class user extends entity
 {
-
-  protected $firstName;
-  protected $lastName;
+  protected $first_name;
+  protected $last_name;
   protected $status;
   protected $phone;
   protected $mail;
 
+  const STATUS = ["Teacher","Secretary", "student"];
 
-  const STATUS = [Teacher,Secretary, student]
-
-
-  public function getFirstName(){ return $this->firstName ;}
-  public function getLastName(){ return  $this->lastName ;}
+  public function getFirst_name(){ return $this->first_name ;}
+  public function getLast_name(){ return $this->last_name ;}
   public function getStatus(){ return $this->status ;}
   public function getPhone(){ return $this->phone ;}
   public function getMail(){ return $this->mail ;}
 
 
 
-  public function setFirstName($firstName) {
-    $this->firstName = $firstName;
+  public function setFirst_name(string $first_name) {
+    $this->first_name = $first_name;
   }
-  public function setLastName($lastName) {
-    $this->lastName = $lastName;
-  }
-
-  public function setStatus($status) {
-    $this->status = $status;
+  public function setLast_name(string $last_name ) {
+    $this->last_name = $last_name;
   }
 
-  public function setPhone($phone) {
+  public function setStatus(string $status) {
+    if(in_array($status, self::STATUS)) {
+      $this->status = $status;
+    }
+  }
+
+  public function setPhone(string $phone) {
     $this->phone = $phone;
   }
-  public function setMail($mail) {
+  public function setMail(string $mail) {
     $this->mail = $mail;
   }
 
-  function __construct()
+  function __construct($data = false)
   {
     if($data) {
       $this->hydrate($data);
