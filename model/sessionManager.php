@@ -24,8 +24,8 @@ class sessionManager extends manager
     $UserSessions = $query->fetchAll(PDO::FETCH_ASSOC);
     $query->closeCursor();
     foreach ($UserSessions as $key => $UserSession) {
-      $student[$key][0] = new session($UserSession);
-      $student[$key][1] = new student($UserSession);
+      $student[$key]["session"] = new session($UserSession);
+      $student[$key]["student"] = new student($UserSession);
       // $studentSession[] = $student;
      }
      return $student;

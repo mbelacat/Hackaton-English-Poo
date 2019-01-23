@@ -6,14 +6,14 @@
 abstract class entity
 {
 
-  protected $id;
+  protected $id_user;
 
-  public function setId(int $id) {
-    $this->id = $id;
+  public function setId_user(int $id_user) {
+    $this->id_user = $id_user;
   }
 
-  public function getId() {
-    return $this->id;
+  public function getId_user() {
+    return $this->id_user;
   }
 
   public function hydrate(array $data) {

@@ -19,11 +19,11 @@ include "view/template/header.php";?>
               foreach ($userSessions as $key => $userSession){
         ?>
         <tr>
-          <th scope="row"><?php echo $userSession[1]->getLast_name()  ?> </th>
-          <td scope="row"><?php echo $userSession[1]->getFirst_name()?> </td>
-          <td scope="row"><?php echo $userSession[0]->getCode() ?> </td>
-          <td scope="row"><?php echo $userSession[0]->getProgress() ?> </td>
-          <td scope="row"><a <?php  setHref("deleteUser"); ?> class="btn btn-danger btn">Supprimer</a></td>
+          <th scope="row"><?php echo $userSession["student"]->getLast_name()  ?> </th>
+          <td scope="row"><?php echo $userSession["student"]->getFirst_name()?> </td>
+          <td scope="row"><?php echo $userSession["session"]->getCode() ?> </td>
+          <td scope="row"><?php echo $userSession["session"]->getProgress() ?> </td>
+          <td scope="row"><a <?php  setHref("deleteUser", ["id" => $userSession["student"]->getId_user()]); ?> class="btn btn-danger btn">Supprimer</a></td>
 
         </tr>
       </thead>

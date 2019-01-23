@@ -5,7 +5,6 @@ class administrationController{
     $userSessions = $sessionManager->getUserSessions();
     require "view/sessionListView.php";
   }
-
 }
 
 
