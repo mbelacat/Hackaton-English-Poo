@@ -3,11 +3,12 @@
 /**
  *
  */
-class adminController 
+class adminController
 {
 
-  public function loginUser() {
-    echo "Voici la login";
+  public function addQuestions() {
+    
+    require "view/addQuestionView.php";
   }
 }
 
