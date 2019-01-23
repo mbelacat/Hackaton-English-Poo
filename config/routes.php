@@ -18,6 +18,10 @@ function getRoutes() {
       "exemple",
       "welcome"
     ],
+    "addQuestion" => [
+      "admin",
+      "addQuestions",
+    ],
     "login" => [
       "admin",
       "loginUser",
