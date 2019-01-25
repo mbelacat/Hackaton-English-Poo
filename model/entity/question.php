@@ -2,7 +2,6 @@
 
 class question extends entity {
 
-  protected $id;
   protected $question;
   protected $response;
 
@@ -15,10 +14,6 @@ class question extends entity {
 
   //Setter
 
-  public function setId($id){
-    $this->id = $id;
-  }
-
   public function setQuestion($question){
     $this->question = $question;
   }
@@ -29,10 +24,6 @@ class question extends entity {
 
 
   //Getter
-
-  public function getId(){
-    return $this->id;
-  }
 
   public function getQuestion(){
     return $this->question;
