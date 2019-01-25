@@ -18,7 +18,7 @@ function getRoutes() {
       "exemple",
       "welcome"
     ],
-    "addQuestion" => [
+    "teacher/addQuestion" => [
       "administration",
       "addQuestions",
     ],
@@ -29,7 +29,16 @@ function getRoutes() {
     "secretary/sessionList" => [
      "administration",
      "sessionList",
-   ],
+    ],
+    "teacher/listQuestion" => [
+      "administration",
+      "listQuestions"
+    ],
+    "teacher/updateQuestion" => [
+      "administration",
+      "updateQuestions",
+      ["id" => ["integer"]],
+    ]
   ];
 }
 

@@ -23,9 +23,30 @@ class administrationController{
       $question->setId($id['id_question']);
       //Add response and last id of question
       $questionManager->addTrueResponse($question);
-
+      redirectTo("teacher/listQuestion");
     }
     require "view/addQuestionView.php";
+  }
+
+
+  public function listQuestions()
+  {
+    $questionManager = new questionManager();
+    $questions = $questionManager->listQuestions();
+    require "view/listQuestionView.php";
+  }
+
+  public function updateQuestions()
+  {
+    $questionManager = new questionManager();
+    $questions = $questionManager->updateQuestion();
+    require "view/updateQuestionView.php";
+  }
+  
+  public function deleteResponses()
+  {
+    $responseManager = new responseManager();
+    $response = $responseManager->deleteResponse($id_response);
   }
 }
  ?>
