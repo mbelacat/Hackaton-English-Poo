@@ -14,7 +14,7 @@ class session extends entity
   protected $progress;
 
   const LEVELS = ["debutant", "moyen", "confirmer"];
-  const PROGRESSS = ["non debuté", "en cours", "terminé"];
+  const PROGRESS = ["non debuté", "en cours", "terminé"];
 
   public function getUserId(){ return $this->user_id ;}
   public function getCode(){ return  $this->code ;}
@@ -55,7 +55,7 @@ class session extends entity
   }
 
   public function setProgress(string $progress = null) {
-    if(in_array($progress, self::PROGRESSS)) {
+    if(in_array($progress, self::PROGRESS)) {
       $this->progress = $progress;
     }
   }
@@ -66,6 +66,22 @@ class session extends entity
 
   public function calculateLevel(){
 
+  }
+  public function creatCode(){
+    $code = "";
+    $option = "abcdefghijklmnpqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
+    srand((double)microtime()*1000000);
+    for($i=0; $i<10; $i++)
+    {
+      $code .= $option[rand()%strlen($option)];
+    }
+      $this->setCode($code) ;
+  }
+  public function initializeQuizzSession(){
+    $currentDate = date("Y-m-d H:i:s");
+    $this->setCreated_date($currentDate);
+    $this->setProgress(self::PROGRESS[0]);
+    $this->creatCode();
   }
 
   function __construct($data = false)

@@ -29,10 +29,19 @@ class sessionManager extends manager
       // $studentSession[] = $student;
      }
      return $student;
-
-
-
   }
+  public function addSession(session $session,$lastID){
+    $query = $this->getDb()->prepare('INSERT INTO session (user_id, code, created_date)
+                                  VALUES(:user_id, :code, :created_date)');
+    $result = $query->execute([
+        "user_id" => $lastID["id_user"],
+        "code" => $session->getCode(),
+        "created_date" => $session->getCreatedDate()
+    ]);
+    return $result = new session();;
+  }
+
+
 
   function __construct()
   {
