@@ -42,6 +42,7 @@ class sessionManager extends manager
   }
 
 
+
   function __construct()
   {
     parent::__construct();

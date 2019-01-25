@@ -7,8 +7,8 @@ include "view/template/header.php";
     <tr>
       <th scope="col">Nom</th>
       <th scope="col">Prenom</th>
-      <th scope="col">telephone</th>
-      <th scope="col">email</th>
+      <th scope="col">progress</th>
+      <th scope="col">Code</th>
     </tr>
   </thead>
   <?php foreach ($users as $key => $user): ?>
@@ -16,8 +16,9 @@ include "view/template/header.php";
       <tr>
         <th><?php echo $user->getFirst_name(); ?></th>
         <td><?php echo $user->getLast_name(); ?></td>
-        <td><?php echo $user->getPhone(); ?></td>
-        <td>@<?php echo $user->getMail(); ?></td>
+
+        <td><?php echo $user->getSession()->getCreatedDate(); ?></td>
+        <td>@<?php echo $user->getSession()->getCode(); ?></td>
       </tr>
     </tbody>
   <?php endforeach; ?>
