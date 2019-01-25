@@ -14,11 +14,11 @@ class question extends entity {
 
   //Setter
 
-  public function setQuestion($question){
+  public function setQuestion(string $question){
     $this->question = $question;
   }
 
-  public function setResponse($response){
+  public function setResponse(string $response){
     $this->response = $response;
   }
 
