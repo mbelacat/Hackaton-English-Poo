@@ -5,7 +5,15 @@
  */
 abstract class entity
 {
+  protected $id;
 
+  public function setId(int $id) {
+    $this->id = $id;
+  }
+
+  public function getId() {
+    return $this->id;
+  }
 
   public function hydrate(array $data) {
     if(!empty($data)) {
