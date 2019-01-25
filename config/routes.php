@@ -21,7 +21,11 @@ function getRoutes() {
     "login" => [
       "admin",
       "loginUser",
-    ]
+    ],
+    "secretary/sessionList" => [
+     "administration",
+     "sessionList",
+   ],
   ];
 }
 
