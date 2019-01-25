@@ -23,7 +23,7 @@ class administrationController{
       $question->setId($id['id_question']);
       //Add response and last id of question
       $questionManager->addTrueResponse($question);
-
+      redirectTo("teacher/listQuestion");
     }
     require "view/addQuestionView.php";
   }
@@ -35,10 +35,11 @@ class administrationController{
     $questions = $questionManager->listQuestions();
     require "view/listQuestionView.php";
   }
+
   public function updateQuestions()
   {
-    $responseManager = new responseManager();
-    $responses = $responseManager->updateQuestion();
+    $questionManager = new questionManager();
+    $questions = $questionManager->updateQuestion();
     require "view/updateQuestionView.php";
   }
   

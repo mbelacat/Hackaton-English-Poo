@@ -4,9 +4,9 @@
 class autoloader {
   //On enregistre dans des constantes de classe les entités, les services et les managers
 
-  const entity = ["entity", "user","session","student","admin", "question"];
+  const entity = ["entity", "user","session","student","admin", "question", "response"];
   const service= ["autoloader"];
-  const manager = ["dataBase","manager","sessionManager", "questionManager"];
+  const manager = ["dataBase","manager","sessionManager", "questionManager", "responseManager"];
   
   //Fonction qui appelle l'autoload register qui se base sur la fonction statique loader
   static public function autoload() {
