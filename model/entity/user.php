@@ -17,7 +17,7 @@ class user extends entity
 
   function __construct()
   {
-
+    
   }
 }
 
