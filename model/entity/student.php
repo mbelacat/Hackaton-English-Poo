@@ -18,6 +18,7 @@ class student extends user
     if($data) {
       $this->hydrate($data);
     }
+    $this->setStatus(parent::STATUS[2]);
   }
 }
 

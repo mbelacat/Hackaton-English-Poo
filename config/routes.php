@@ -20,20 +20,24 @@ function getRoutes() {
     ],
     "addQuestion" => [
       "administration",
-      "addQuestions",
+      "addQuestions"
     ],
     "login" => [
       "admin",
-      "loginUser",
+      "loginUser"
     ],
     "secretary/sessionList" => [
      "administration",
-     "sessionList",
+     "sessionList"
    ],
    // test route simon for user manager
    "listUser" => [
-     "exemple",
-     "showUsers",
+     "administration",
+     "showUsers"
+   ],
+   "addUser" => [
+     "administration",
+     "newUser"
    ]
   ];
 }

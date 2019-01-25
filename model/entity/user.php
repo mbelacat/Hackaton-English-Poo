@@ -11,7 +11,7 @@ class user extends entity
   protected $phone;
   protected $mail;
 
-  const STATUS = ["Teacher","Secretary", "student"];
+  const STATUS = ["Teacher","Secretary", "Student"];
 
   public function getFirst_name(){ return $this->first_name ;}
   public function getLast_name(){ return $this->last_name ;}

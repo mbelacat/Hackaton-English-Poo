@@ -12,33 +12,33 @@ class exempleController
   public function showUsers() {
 
     require "model/UserManager.php";
-    $getusers = New UserManager();
-    $users = $getusers->getUsers();
-    var_dump($users);
+    $userManager = New userManager();
+    $users = $userManager->getUsers();
     require "view/showUsersView.php";
-        }
+  }
 
 //////test add user(Student)
-    function addStudent(){
-      if(!empty($_POST)){
-        //Add User
-            addUser($_POST);
-            $user_id = getLastUserID();
-            $code = uniqCode(10);
-            //Add Session
-            if(addSession($_POST, $user_id, $code)){
-                redirectTo('secretary/results');
-            }
-            else{
-                redirectTo('secretary/addStudent');
-            }
-          }
+  public  function newUser(){
+    if (!empty($_POST)) {
+      $student = New student($_POST);
+      $userManager = New userManager();
+
+
+      $userManager->addStudent($student);
+      $lastId = $userManager->getLastUserID();
+      $session = new session();
+      $sessionManager = new sessionManager();
+      $session->initializeQuizzSession();
+      $sessionManager->addSession($session,$lastId);
+
+
+
+      var_dump($lastId);
+
+  }
       require 'view/createSessionStudentView.php';
     }
-
-
-
-}
+  }
 
 
  ?>
