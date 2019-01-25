@@ -5,6 +5,7 @@
 class exempleController
 {
 
+<<<<<<< HEAD
   public function welcome(){
 
   }
@@ -38,6 +39,16 @@ class exempleController
 
 
 
+=======
+  public function welcome() {
+      $message = "Bonjour voici un boilerplate PHP intégrant un système de routing";
+      
+
+      require "view/exempleView.php";
+    }
+
+
+>>>>>>> 61ece8e7d5000dd367c401058ebb3a515456fdbc
 }
 
 
