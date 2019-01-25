@@ -6,15 +6,6 @@ include "view/template/header.php";
 
 <!--
 Here the "reponse #" will be replace by the information  -->
-<div class="mx-auto mt-3">
-  <!-- Presentation of questions + responses -->
-  <?php $index = 0;
-  $responses = getResponsesQuestion($questions[$index]["id_question"]);
-  ?>
-  <div class="">Question <?php echo ($index+1). " : " . $questions[$index]["question"]; ?>
-  </div>
-  <?php include "view/form/formTestQuestionResponse.php" ?>
-</div>
 
 
 <div class="row">
