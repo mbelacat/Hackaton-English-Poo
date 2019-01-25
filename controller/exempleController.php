@@ -5,10 +5,11 @@
 class exempleController
 {
 
-  public function welcome(){
 
-  }
+  public function welcome() {
+      $message = "Bonjour voici un boilerplate PHP intégrant un système de routing";
 
+}
   public function showUsers() {
 
     require "model/UserManager.php";
@@ -16,14 +17,11 @@ class exempleController
     $users = $userManager->getUsers();
     require "view/showUsersView.php";
   }
-
 //////test add user(Student)
   public  function newUser(){
     if (!empty($_POST)) {
       $student = New student($_POST);
       $userManager = New userManager();
-
-
       $userManager->addStudent($student);
       $lastId = $userManager->getLastUserID();
       $session = new session();
@@ -31,14 +29,13 @@ class exempleController
       $session->initializeQuizzSession();
       $sessionManager->addSession($session,$lastId);
 
-
-
+}
       var_dump($lastId);
-
   }
       require 'view/createSessionStudentView.php';
     }
-  }
+
+
 
 
  ?>

@@ -6,7 +6,7 @@ class autoloader {
 
   const entity = ["entity", "user","session","student","admin", "question"];
   const service= ["autoloader"];
-  const manager = ["dataBase","manager","sessionManager", "questionManager", "userManager"];
+  const manager = ["dataBase","manager","sessionManager", "questionManager","userManager"];
 
   //Fonction qui appelle l'autoload register qui se base sur la fonction statique loader
   static public function autoload() {

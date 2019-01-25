@@ -26,19 +26,42 @@ function getRoutes() {
       "admin",
       "loginUser"
     ],
+
+    // test route simon for user manager
+    "listUser" => [
+      "administration",
+      "showUsers"
+    ],
+    "addUser" => [
+      "administration",
+      "newUser"
+    ]
+
     "secretary/sessionList" => [
      "administration",
      "sessionList"
    ],
-   // test route simon for user manager
-   "listUser" => [
-     "administration",
-     "showUsers"
-   ],
-   "addUser" => [
-     "administration",
-     "newUser"
-   ]
+//////////////////////////// USER///////////////////////////////
+   "testStart"=> [
+    "user",
+    "testStart",
+    // "status" => "user"
+    // ["id" => ["integer"]],
+    ],
+
+    "test" => [
+      "user",
+      "test",
+      // "status" => "user"
+      // ["id" => ["integer"]],
+    ],
+    "testEnd" => [
+      "user",
+      "testEnd",
+      // "status" => "user"
+    ],
+
+
   ];
 }
 

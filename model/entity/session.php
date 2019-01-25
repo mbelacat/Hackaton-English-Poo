@@ -1,9 +1,10 @@
-created_date<?php
+<?php
 /**
  *
  */
 class session extends entity
 {
+  protected $id_session;
   protected $user_id;
   protected $code;
   protected $created_date;
@@ -14,13 +15,13 @@ class session extends entity
   protected $progress;
 
   const LEVELS = ["debutant", "moyen", "confirmer"];
-  const PROGRESS = ["non debuté", "en cours", "terminé"];
+  const PROGRESS = ["non débuté", "en cours", "terminé"];
 
   public function getUserId(){ return $this->user_id ;}
   public function getCode(){ return  $this->code ;}
-  public function getCreatedDate(){ return $this->created_date ;}
-  public function getStartQcmDate(){ return $this->end_qcm_date ;}
-  public function getEndQcmDate(){ return $this->start_qcm_date ;}
+  public function getCreated_date(){ return $this->created_date ;}
+  public function getStart_qcm_date(){ return $this->start_qcm_date ;}
+  public function getEnd_qcm_date(){ return $this->end_qcm_date ;}
   public function getResult(){ return $this->result ;}
   public function getLevel(){ return $this->level ;}
   public function getProgress(){ return $this->progress ;}
@@ -36,7 +37,7 @@ class session extends entity
     $this->created_date = $created_date;
   }
 
-  public function setEndQcm_date(string $end_qcm_date = null) {
+  public function setEnd_qcm_date(string $end_qcm_date = null) {
     $this->end_qcm_date = $end_qcm_date;
   }
 

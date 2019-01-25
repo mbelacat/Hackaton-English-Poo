@@ -5,13 +5,13 @@
  */
 abstract class entity
 {
+
   protected $id;
 
-  public function setId(int $id) {
+  public function setId_user(int $id) {
     $this->id = $id;
   }
-
-  public function getId() {
+  public function getId_user() {
     return $this->id;
   }
 

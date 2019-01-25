@@ -13,7 +13,7 @@ class admin extends user
     $this->password = $password;
   }
 
-  function __construct()
+  function __construct($data = false)
   {
     if($data) {
       $this->hydrate($data);
