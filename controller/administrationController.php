@@ -1,7 +1,11 @@
 <?php
+class administrationController{
 
-class adminController
-{
+  public function sessionList(){
+    $sessionManager = new sessionManager;
+    $userSessions = $sessionManager->getUserSessions();
+    require "view/sessionListView.php";
+  }
 
   public function addQuestions() {
     //Check if form is not empty
@@ -24,7 +28,4 @@ class adminController
     require "view/addQuestionView.php";
   }
 }
-
-
-
  ?>

@@ -19,13 +19,17 @@ function getRoutes() {
       "welcome"
     ],
     "addQuestion" => [
-      "admin",
+      "administration",
       "addQuestions",
     ],
     "login" => [
       "admin",
       "loginUser",
-    ]
+    ],
+    "secretary/sessionList" => [
+     "administration",
+     "sessionList",
+   ],
   ];
 }
 
