@@ -31,8 +31,8 @@ class questionManager extends manager {
   //Method qui permet de recuperer le dernière ID d'une question
   public function getLastQuestionID(){
 
-  $query = $this->getDb()->query('SELECT id_question FROM question ORDER BY id_question DESC LIMIT 0, 1');
-  $result = $query->fetchAll(PDO::FETCH_CLASS, "question");
+  $query = $this->getDb()->query('SELECT id_question FROM question ORDER BY id_question DESC');
+  $result = $query->fetch(PDO::FETCH_ASSOC);
 
   return $result;  // $lastId['id'] cette variable contient le dernier id<br>
 

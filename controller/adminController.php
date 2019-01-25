@@ -7,14 +7,17 @@ class adminController
     //Check if form is not empty
     if(!empty($_POST)){
 
-      //J'instancie mes objets
+      //Instantiate Object
       $questionManager = new questionManager();
-      $id = $questionManager->getLastQuestionID();
-
       $question = new question($_POST);
-      $question->setId($id);
-      
+
+      //Add question on first time for get last_id of question
       $questionManager->addQuestion($question);
+      //Get last Id
+      $id = $questionManager->getLastQuestionID();
+      //Set id for question
+      $question->setId($id['id_question']);
+      //Add response and last id of question
       $questionManager->addTrueResponse($question);
 
     }
