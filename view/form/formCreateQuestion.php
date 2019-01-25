@@ -19,8 +19,8 @@
         <!-- Input ou la prof inscrit les mauvaises réponses -->
         <div class="form-group">
             <label for="bad_answer">Mauvaises réponses:</label>
-            <input type="text" class="form-control mb-3" id="bad_response1" name="response" placeholder="Mauvaise réponse 1" >
-            <input type="text" class="form-control" id="bad_response2" name="response" placeholder="Mauvaise réponse 2" >
+            <input type="text" class="form-control mb-3" id="bad_response1" placeholder="Mauvaise réponse 1" >
+            <input type="text" class="form-control" id="bad_response2" placeholder="Mauvaise réponse 2" >
         </div>
         <!-- Bouton pour ajouter la question -->
         <button type="submit" class="btn btn-success">Ajouter la question</button>

@@ -19,7 +19,7 @@ function getRoutes() {
       "welcome"
     ],
     "addQuestion" => [
-      "admin",
+      "administration",
       "addQuestions",
     ],
     "login" => [
