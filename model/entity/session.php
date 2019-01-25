@@ -4,6 +4,7 @@
  */
 class session extends entity
 {
+  protected $id_session;
   protected $user_id;
   protected $code;
   protected $created_date;

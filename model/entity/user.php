@@ -5,6 +5,7 @@
  */
 class user extends entity
 {
+  protected $id_user;
   protected $first_name;
   protected $last_name;
   protected $status;
@@ -13,6 +14,7 @@ class user extends entity
 
   const STATUS = ["Teacher","Secretary", "student"];
 
+  public function getId_user(){return $this->id_user ;}
   public function getFirst_name(){ return $this->first_name ;}
   public function getLast_name(){ return $this->last_name ;}
   public function getStatus(){ return $this->status ;}
@@ -20,10 +22,14 @@ class user extends entity
   public function getMail(){ return $this->mail ;}
 
 
+  public function setId_user(int $id_user){
+    $this->id_user = $id_usez;
+  }
 
   public function setFirst_name(string $first_name) {
     $this->first_name = $first_name;
   }
+
   public function setLast_name(string $last_name ) {
     $this->last_name = $last_name;
   }
