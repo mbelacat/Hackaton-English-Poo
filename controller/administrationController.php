@@ -27,5 +27,13 @@ class administrationController{
     }
     require "view/addQuestionView.php";
   }
+
+  public function admittedList(){
+    $userManager = new userManager();
+    //Return array with skill of user
+    $users_skill = $userManager->getUsersSkill();
+
+    require "view/admittedListView.php";
+  }
 }
  ?>
