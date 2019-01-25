@@ -21,6 +21,12 @@ function getRoutes() {
     "login" => [
       "admin",
       "loginUser",
+    ],
+
+    // test route simon for user manager
+    "listUser" => [
+      "exemple",
+      "showUsers",
     ]
   ];
 }
