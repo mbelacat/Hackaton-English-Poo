@@ -5,7 +5,6 @@
  */
 abstract class entity
 {
-
   protected $id;
 
   public function setId(int $id) {

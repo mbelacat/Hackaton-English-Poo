@@ -4,6 +4,7 @@ function getGlobalConfig() {
   return $config = [
     "protocol" => "",
     "host" => "localhost/Lab/Hackaton-English-Poo/",
+    "status" => ["anonymous", "user", "admin"],
     "status" => ["user", "Teacher", "Secretary",],
     "defaultRoute" => ""
   ];
