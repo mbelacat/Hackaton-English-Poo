@@ -4,7 +4,7 @@
  */
 class responseController
 {
-    public function showQuestions()
+    public function updateQuestions()
     {
         $responseManager = new responseManager();
         $responses = $responseManager->showQuestion();

@@ -45,12 +45,13 @@ class response extends entity
         return $this->questionId;
     }
 
-
-    function __construct()
+    function __construct($data = false)
     {
-
+        if($data)
+        {
+            $this->hydrate($data);
+        }
     }
-
 }
 
  ?>

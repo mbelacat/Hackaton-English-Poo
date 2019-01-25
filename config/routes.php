@@ -15,8 +15,8 @@
 function getRoutes() {
   return [
     "" => [
-      "response",
-      "showQuestions"
+      "exemple",
+      "welcome"
     ],
     "login" => [
       "admin",
