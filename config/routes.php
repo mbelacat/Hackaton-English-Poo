@@ -26,19 +26,15 @@ function getRoutes() {
       "admin",
       "loginUser",
     ],
-<<<<<<< HEAD
-
-    // test route simon for user manager
-    "listUser" => [
-      "exemple",
-      "showUsers",
-    ]
-=======
     "secretary/sessionList" => [
      "administration",
      "sessionList",
    ],
->>>>>>> 61ece8e7d5000dd367c401058ebb3a515456fdbc
+   // test route simon for user manager
+   "listUser" => [
+     "exemple",
+     "showUsers",
+   ]
   ];
 }
 
