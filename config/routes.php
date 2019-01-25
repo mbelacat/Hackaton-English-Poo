@@ -22,10 +22,32 @@ function getRoutes() {
       "admin",
       "loginUser",
     ],
+
+
+
     "secretary/sessionList" => [
      "administration",
      "sessionList",
    ],
+//////////////////////////// USER///////////////////////////////
+   "testStart"=> [
+    "user",
+    "testStart",
+    // "status" => "user"
+    // ["id" => ["integer"]],
+    ],
+
+    "test" => [
+      "user",
+      "test",
+      // "status" => "user"
+      // ["id" => ["integer"]],
+    ],
+    "testEnd" => [
+      "user",
+      "testEnd",
+      // "status" => "user"
+    ],
   ];
 }
 
