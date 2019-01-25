@@ -18,10 +18,6 @@ function getRoutes() {
       "exemple",
       "welcome"
     ],
-    "teacher/admittedList" => [
-      "administration",
-      "admittedList"
-    ],
     "addQuestion" => [
       "administration",
       "addQuestions",
