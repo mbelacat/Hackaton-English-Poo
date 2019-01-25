@@ -12,7 +12,7 @@ class user extends entity
   protected $phone;
   protected $mail;
 
-  const STATUS = ["Teacher","Secretary", "student"];
+  const STATUS = ["Teacher","Secretary", "Student"];
 
   public function getId_user(){return $this->id_user ;}
   public function getFirst_name(){ return $this->first_name ;}
@@ -23,7 +23,7 @@ class user extends entity
 
 
   public function setId_user(int $id_user){
-    $this->id_user = $id_usez;
+    $this->id_user = $id_user;
   }
 
   public function setFirst_name(string $first_name) {

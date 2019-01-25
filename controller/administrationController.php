@@ -27,5 +27,32 @@ class administrationController{
     }
     require "view/addQuestionView.php";
   }
-}
+  public function showUsers() {
+
+    require "model/UserManager.php";
+    $userManager = New userManager();
+    $session = New session();
+    $sessionDate = $session->getCreatedDate();
+    $users = $userManager->getUsers();
+
+    require "view/showUsersView.php";
+  }
+//////test add user(Student)
+  public  function newUser(){
+    if (!empty($_POST)) {
+      $student = New student($_POST);
+      $userManager = New userManager();
+
+
+      $userManager->addStudent($student);
+      $lastId = $userManager->getLastUserID();
+      $session = new session();
+      $sessionManager = new sessionManager();
+      $session->initializeQuizzSession();
+      $sessionManager->addSession($session,$lastId);
+  }
+      require 'view/createSessionStudentView.php';
+    }
+  }
+
  ?>

@@ -68,6 +68,22 @@ class session extends entity
   public function calculateLevel(){
 
   }
+  public function creatCode(){
+    $code = "";
+    $option = "abcdefghijklmnpqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
+    srand((double)microtime()*1000000);
+    for($i=0; $i<10; $i++)
+    {
+      $code .= $option[rand()%strlen($option)];
+    }
+      $this->setCode($code) ;
+  }
+  public function initializeQuizzSession(){
+    $currentDate = date("Y-m-d H:i:s");
+    $this->setCreated_date($currentDate);
+    $this->setProgress(self::PROGRESS[0]);
+    $this->creatCode();
+  }
 
   function __construct($data = false)
   {
